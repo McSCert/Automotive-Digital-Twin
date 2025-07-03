@@ -1,0 +1,5 @@
+user_interface:
+  ros__parameters:
+    x_bounds: [-2.0, 2.0]
+    y_bounds: [-0.5, 3.5]
+    z_bounds: [0.0, 4.0]

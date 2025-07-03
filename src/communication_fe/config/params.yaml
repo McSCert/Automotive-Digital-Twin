@@ -1,0 +1,93 @@
+# client nodes
+# vehicle -> dt -> ui
+udp_to_ros_vehicle_to_dt:
+  ros__parameters:
+    # IP of DT Entity
+    ip: "127.0.0.1"
+    port: 5005
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "dt"
+
+udp_to_ros_dt_to_ui:
+  ros__parameters:
+    # IP of User Entity
+    ip: "127.0.0.1"
+    port: 5006
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "ui"
+
+# ui -> dt -> vehicle
+udp_to_ros_ui_to_dt:
+  ros__parameters:
+    # IP of DT Entity
+    ip: "127.0.0.1"
+    port: 5007
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "dt"
+
+udp_to_ros_dt_to_vehicle:
+  ros__parameters:
+    # IP of PT Entity
+    ip: "127.0.0.1"
+    port: 5008
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "vehicle"
+
+# server nodes
+# vehicle -> dt -> ui
+ros_to_udp_vehicle_to_dt:
+  ros__parameters:
+    # IP of DT Entity
+    ip: "127.0.0.1"
+    port: 5005
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "vehicle"
+    # destination of packets
+    # must be 'ui', 'dt', 'vehicle' or ''
+    # if '' , then sends to all
+    destination_device: ""
+
+ros_to_udp_dt_to_ui:
+  ros__parameters:
+    # IP of User Entity
+    ip: "127.0.0.1"
+    port: 5006
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "dt"
+    # destination of packets
+    # must be 'ui', 'dt', 'vehicle' or ''
+    # if '' , then sends to all
+    destination_device: "ui"
+
+# ui -> dt -> vehicle
+ros_to_udp_ui_to_dt:
+  ros__parameters:
+    # IP of DT Entity
+    ip: "127.0.0.1"
+    port: 5007
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "ui"
+    # destination of packets
+    # must be 'ui', 'dt', 'vehicle' or ''
+    # if '' , then sends to all
+    destination_device: ""
+
+ros_to_udp_dt_to_vehicle:
+  ros__parameters:
+    # IP of PT Entity
+    ip: "127.0.0.1"
+    port: 5008
+    # device currently running the node
+    # must be 'ui', 'dt', or 'vehicle'
+    device_type: "dt"
+    # destination of packets
+    # must be 'ui', 'dt', 'vehicle' or ''
+    # if '' , then sends to all
+    destination_device: "vehicle"

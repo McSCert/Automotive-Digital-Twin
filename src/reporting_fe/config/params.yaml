@@ -1,0 +1,4 @@
+reporting:
+  ros__parameters:
+    # base directory of repo
+    base_dir: /home/winnie/Documents/cas782_dt

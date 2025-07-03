@@ -1,0 +1,9 @@
+# bbox filtering parameters
+tracks_to_bboxes:
+  ros__parameters:
+    # minimum area of bounding box (m^2)
+    min_area: 0.0
+    # minimum distance to centroid of bounding box (m)
+    min_dist: 0.15
+    # minimum longitudinal distance (m)
+    min_y: 0.1
