@@ -1,10 +1,12 @@
 # Automotive Digital Twin based on ISO 23247 Reference Architecture
-This repo provides the digital twin implementation of the RoboRacer (formerly F1Tenth) project following the ISO 23247 reference architecture.  
-Ros packages with a '_fe' suffix correspond to the respective functional entity from the ISO 23247 reference architecture.  
-For details, see **Engineering Automotive Digital Twins On Standardized Architectures: How Far Are We?**, planned to be submitted to EDTconf 2025.    
+This repository contains the technical artifacts of a case study on engineering a digital twin (DT) for adaptive cruise control (ACC) in autonomous vehicles (AV). The aim of the case study is to evaluate the suitability of the ISO 23247 reference architecture in automotive settings.
+The [RoboRacer](https://roboracer.ai/) (formerly F1Tenth) stack serves as the physical twin.
+[ROS](https://www.ros.org/) packages with a `_fe` suffix correspond to the respective functional entity (FE) from the ISO 23247 reference architecture.
+
+The corresponding publication, **Engineering Automotive Digital Twins On Standardized Architectures: How Far Are We?**, is under review for the [2nd International Conference on Engineering Digital Twins (EDTconf 2025)](https://conf.researchr.org/home/edtconf-2025).
 
 ## Functionality
-The implemented Digital Twin (DT) extends the functionality of Adaptive Cruise Control (ACC) by providing the following:
+The implemented DT extends the functionality of ACC by providing the following:
 - Data Monitoring: provides a virtual cockpit to the user
 - Remote Management: allows high-level control of ACC remotely through a control panel
 - Computation Offloading: the ACC computations are offloaded from the vehicle to the DT for stronger compute resources
@@ -78,8 +80,8 @@ Future development will be conducted to compress and transmit it to the User Ent
 `export AMENT_PREFIX_PATH="$AMENT_PREFIX_PATH:/path/to/repo/install/communication_fe`
 
 ## Acknowledgements
-The authors would like to thank McMaster's Centre for Software Certification (McSCert) team for their expertise and the RoboRacer hardware. 
-The authors would also like to thank the maintainers of Roboracer for an excellent 1/10 scale vehicle testbed.  
+The authors would like to thank [McMaster's Centre for Software Certification (McSCert)](https://www.mcscert.ca/) team for their expertise and the RoboRacer hardware. 
+The authors would also like to thank the maintainers of [RoboRacer](https://roboracer.ai/) for an excellent 1/10 scale vehicle testbed.  
 
 ## License
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
