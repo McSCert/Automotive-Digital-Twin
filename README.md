@@ -3,7 +3,9 @@ This repository contains the technical artifacts of a case study on engineering 
 The [RoboRacer](https://roboracer.ai/) (formerly F1Tenth) stack serves as the physical twin.
 [ROS](https://www.ros.org/) packages with a `_fe` suffix correspond to the respective functional entity (FE) from the ISO 23247 reference architecture.
 
-The corresponding publication, **Engineering Automotive Digital Twins On Standardized Architectures: How Far Are We?**, is under review for the [2nd International Conference on Engineering Digital Twins (EDTconf 2025)](https://conf.researchr.org/home/edtconf-2025).
+The corresponding publication, **Engineering Automotive Digital Twins on Standardized Architectures: Lessons Learned from a Case Study?**, is under review for the [2nd International Conference on Engineering Digital Twins (EDTconf 2025)](https://conf.researchr.org/home/edtconf-2025), co-hosted with MODELS.
+
+Our [demonstration video](https://youtu.be/Rv-sJJQc3WU) is available on YouTube.
 
 ## Functionality
 The implemented DT extends the functionality of ACC by providing the following:
