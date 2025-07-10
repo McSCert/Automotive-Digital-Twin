@@ -3,9 +3,16 @@ This repository contains the technical artifacts of a case study on engineering 
 The [RoboRacer](https://roboracer.ai/) (formerly F1Tenth) stack serves as the physical twin.
 [ROS](https://www.ros.org/) packages with a `_fe` suffix correspond to the respective functional entity (FE) from the ISO 23247 reference architecture.
 
-The corresponding publication, **Engineering Automotive Digital Twins on Standardized Architectures: Lessons Learned from a Case Study?**, is under review for the [2nd International Conference on Engineering Digital Twins (EDTconf 2025)](https://conf.researchr.org/home/edtconf-2025), co-hosted with MODELS.
+The corresponding publication, **Engineering Automotive Digital Twins on Standardized Architectures: Lessons from a Case Study**, is under review for the [2nd International Conference on Engineering Digital Twins (EDTconf 2025)](https://conf.researchr.org/home/edtconf-2025), co-hosted with MODELS.
 
 Our [demonstration video](https://youtu.be/Rv-sJJQc3WU) is available on YouTube.
+
+## Architecture Overview
+The Digital Twin System is hosted across three devices: the Physical Twin Entity, the Digital Twin Entity, and the User Entity. 
+An overview of this architecture, as well as its mapping to the ISO 23247 reference architecture, is below:  
+<div align="center">
+  <img width="100%" alt="Architecture Overview" src="media/architectureOverview.png">
+</div>
 
 ## Functionality
 The implemented DT extends the functionality of ACC by providing the following:
@@ -75,11 +82,6 @@ To do so, replace the appropriate IP address with `127.0.0.1`.
 ## Future Work
 The on-board camera stream is currently not properly integrated with the User Entity due to bandwidth considerations. 
 Future development will be conducted to compress and transmit it to the User Entity without incurring a significant latency increase.  
-
-## Troubleshooting
-**Problem Description**: communication_fe package is not found when running/launching, even though it builds, environment is sourced, and all other packages are available.  
-**Solution**: manually add the path to the AMENT_PREFIX_PATH environment variable.  
-`export AMENT_PREFIX_PATH="$AMENT_PREFIX_PATH:/path/to/repo/install/communication_fe`
 
 ## Acknowledgements
 The authors would like to thank [McMaster's Centre for Software Certification (McSCert)](https://www.mcscert.ca/) team for their expertise and the RoboRacer hardware. 
