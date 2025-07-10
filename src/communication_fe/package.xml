@@ -3,7 +3,7 @@
 <package format="3">
   <name>communication_fe</name>
   <version>0.0.0</version>
-  <description>Package to perform ROS2<->UDP conversions.</description>
+  <description>Package to perform ROS2 to UDP conversions.</description>
   <maintainer email="trandint@mcmaster.ca">Winnie</maintainer>
   <license>Apache-2.0</license>
 
