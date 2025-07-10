@@ -16,6 +16,25 @@ def generate_launch_description():
         ])
     ])
 
+    # control panel layout
+    control_panel_perspective = PathJoinSubstitution([
+        get_package_share_directory('user_interface_fe'),
+        'config',
+        'user_interface.perspective'
+    ])
+
+    # control panel
+    control_node = Node(
+        package="rqt_gui",
+        executable="rqt_gui",
+        name="control_panel",
+        arguments=[
+            "--perspective-file",
+            control_panel_perspective
+        ]
+    )
+    ld.add_action(control_node)
+
     # create communication nodes manually since must
     # have unique node names
     communication_config = PathJoinSubstitution([
